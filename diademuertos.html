@@ -1,19 +1,50 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Oxharmonia - Dia de Muertos Download</title>
-  <meta http-equiv="refresh" content="0; url=https://archive.org/details/oxharmonia_diademuertos_guide_en.pdf_20250806" />
+  <title>Oxharmonia - Dia de Muertos Guide</title>
+  <meta http-equiv="refresh" content="3; url=https://archive.org/details/oxharmonia_diademuertos_guide_en.pdf_20250806" />
+  
   <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1A2B3C4D5E"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-34K0FSXH8L"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-34K0FSXH8L'); // CONSERVEZ LE G-
+    gtag('config', 'G-34K0FSXH8L');
+    
+    // Suivi du démarrage de redirection
+    gtag('event', 'redirect_triggered', {
+      event_category: 'pdf_download',
+      event_label: 'DiaDeMuertos_EN'
+    });
   </script>
+  
+  <!-- Suivi supplémentaire -->
+  <noscript>
+    <img src="https://www.google-analytics.com/g/collect?v=2&tid=G-34K0FSXH8L&en=ns_redirect&epn.title=DiaDeMuertos_NoJS" 
+         width="0" height="0" alt="" style="display:none">
+  </noscript>
 </head>
-<body>
-  <p>Redirection vers le guide Día de Muertos...</p>
-  <p>Si rien ne se passe, <a href="https://archive.org/details/diademuertos-oxharmonia">cliquez ici</a></p>
+<body style="background: #0f0f0f; color: #ffffff; text-align: center; padding: 40px; font-family: 'Segoe UI', sans-serif;">
+  <div style="max-width: 600px; margin: 0 auto;">
+    <img src="https://i.imgur.com/calavera.png" alt="Día de Muertos" style="width: 150px; margin-bottom: 20px;">
+    <h1 style="color: #ff6b35;">Téléchargement du guide Día de Muertos</h1>
+    <p>Redirection vers Archive.org dans <span id="countdown">3</span> secondes...</p>
+    <p>Si la redirection ne fonctionne pas, <a href="https://archive.org/details/oxharmonia_diademuertos_guide_en.pdf_20250806" style="color: #ff9e6b; text-decoration: underline;">cliquez ici</a></p>
+    <div style="margin-top: 30px; font-size: 14px; color: #aaa;">
+      Projet Echoes of Earth • @oxharmonia
+    </div>
+  </div>
+
+  <script>
+    // Compte à rebours visible
+    let seconds = 3;
+    const countdownEl = document.getElementById('countdown');
+    const countdownInterval = setInterval(() => {
+      seconds--;
+      countdownEl.textContent = seconds;
+      if (seconds <= 0) clearInterval(countdownInterval);
+    }, 1000);
+  </script>
 </body>
 </html>
